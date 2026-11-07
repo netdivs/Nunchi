@@ -1,0 +1,47 @@
+[
+  {
+    "id": "bridal-glow-package",
+    "title": "Bridal Glow Package",
+    "description": "A complete bridal beauty experience with hair styling, HD makeup, lashes and a pre-wedding skin ritual — created around your day, your dress and your glow.",
+    "image": "/images/bridal/barat-red.jpg",
+    "imageAlt": "Bridal makeup artistry at Nunchi Salon by Naheed",
+    "originalPrice": 45000,
+    "discountedPrice": 32500,
+    "currency": "PKR",
+    "expiryDate": "2027-01-31",
+    "badge": "Signature Offer",
+    "bookingHref": "/contact",
+    "published": true,
+    "createdAt": "2026-10-24T10:00:00.000Z"
+  },
+  {
+    "id": "hair-ritual-reset",
+    "title": "Hair Ritual Reset",
+    "description": "A deeply restorative salon ritual with a scalp cleanse, bond-repair mask, precision trim and a silky finish — designed to bring your hair back to its healthiest shine.",
+    "image": "/images/hairwash.jpg",
+    "imageAlt": "Restorative hair treatment at Nunchi Salon by Naheed",
+    "originalPrice": 18000,
+    "discountedPrice": 12500,
+    "currency": "PKR",
+    "expiryDate": "2026-12-31",
+    "badge": "Limited Time",
+    "bookingHref": "/contact",
+    "published": true,
+    "createdAt": "2026-10-18T10:00:00.000Z"
+  },
+  {
+    "id": "nail-couture-edit",
+    "title": "Nail Couture Edit",
+    "description": "A polished manicure and pedicure pairing with cuticle care, a long-wear gel finish and your choice of our seasonal couture shades.",
+    "image": "/images/nails.jpg",
+    "imageAlt": "Luxury manicure and pedicure at Nunchi Salon by Naheed",
+    "originalPrice": 12000,
+    "discountedPrice": 8500,
+    "currency": "PKR",
+    "expiryDate": "2026-11-30",
+    "badge": "Popular",
+    "bookingHref": "/contact",
+    "published": true,
+    "createdAt": "2026-10-10T10:00:00.000Z"
+  }
+]
