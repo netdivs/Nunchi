@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, type TouchEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useReducedMotion } from "framer-motion";
@@ -14,6 +14,7 @@ export default function Hero() {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
   const reduce = useReducedMotion();
+  const touchStartX = useRef<number | null>(null);
 
   const goTo = (index: number) => {
     setActive((index + HERO_SLIDES.length) % HERO_SLIDES.length);
@@ -27,12 +28,28 @@ export default function Hero() {
     return () => window.clearInterval(timer);
   }, [paused, reduce]);
 
+  const onTouchStart = (event: TouchEvent<HTMLElement>) => {
+    touchStartX.current = event.touches[0]?.clientX ?? null;
+  };
+
+  const onTouchEnd = (event: TouchEvent<HTMLElement>) => {
+    const startX = touchStartX.current;
+    touchStartX.current = null;
+    if (startX === null) return;
+    const endX = event.changedTouches[0]?.clientX ?? startX;
+    const delta = endX - startX;
+    if (Math.abs(delta) < 48) return;
+    goTo(delta < 0 ? active + 1 : active - 1);
+  };
+
   return (
     <section
       className="nc-hero"
       aria-label="Welcome to Nunchi Salon by Naheed"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
+      onTouchStart={onTouchStart}
+      onTouchEnd={onTouchEnd}
     >
       {HERO_SLIDES.map((slide, index) => {
         const Heading = index === 0 ? "h1" : "h2";
@@ -111,6 +128,20 @@ export default function Hero() {
         >
           <ArrowRightIcon size={18} />
         </button>
+      </div>
+
+      <div className="nc-hero-dots" role="tablist" aria-label="Hero slides">
+        {HERO_SLIDES.map((slide, index) => (
+          <button
+            key={slide.image}
+            type="button"
+            role="tab"
+            aria-selected={active === index}
+            aria-label={`Slide ${index + 1}: ${slide.subtitle}`}
+            className={cn("nc-hero-dot", active === index && "is-active")}
+            onClick={() => goTo(index)}
+          />
+        ))}
       </div>
 
       <Image

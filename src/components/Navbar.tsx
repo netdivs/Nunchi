@@ -25,7 +25,6 @@ const CALL_NUMBERS = "03210044497 - 03030500012";
 export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
   const [open, setOpen] = useState(false);
 
   const isActive = useCallback(
@@ -37,7 +36,6 @@ export default function Navbar() {
   useEffect(() => {
     const media = window.matchMedia("(max-width: 991px)");
     const syncMobile = () => {
-      setIsMobile(media.matches);
       if (!media.matches) setOpen(false);
     };
     syncMobile();
@@ -47,12 +45,12 @@ export default function Navbar() {
 
   useEffect(() => {
     const onScroll = () => {
-      setScrolled(!isMobile && window.scrollY > 70);
+      setScrolled(window.scrollY > 70);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [isMobile]);
+  }, []);
 
   useEffect(() => {
     if (!open) return;
@@ -275,6 +273,37 @@ export default function Navbar() {
               {SITE.phone}
             </a>
             <p className="mt-4">We are open 11:00 AM — 8:00 PM, seven days a week.</p>
+
+            <Link
+              href="/contact"
+              className="nc-btn nc-appointment-btn nc-mobile-cta"
+              onClick={() => setOpen(false)}
+            >
+              Appointment Now
+              <span aria-hidden="true">&rarr;</span>
+            </Link>
+
+            <div className="nc-mobile-social">
+              {SITE.socials.map((social) => {
+                const Icon =
+                  social.label === "Facebook"
+                    ? FacebookIcon
+                    : social.label === "Instagram"
+                      ? InstagramIcon
+                      : TikTokIcon;
+                return (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${SITE.shortName} on ${social.label}`}
+                  >
+                    <Icon size={17} />
+                  </a>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
