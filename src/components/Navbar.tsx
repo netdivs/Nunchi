@@ -276,7 +276,7 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="nc-btn nc-appointment-btn nc-mobile-cta"
+              className="nc-btn nc-mobile-cta"
               onClick={() => setOpen(false)}
             >
               Appointment Now
