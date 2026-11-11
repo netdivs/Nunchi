@@ -19,7 +19,7 @@ const PAGE_URL = `${SITE.url}${PAGE_PATH}`;
 
 const PAGE_TITLE = "Beauty Salon in Wapda Town";
 const PAGE_DESCRIPTION =
-  "Looking for a beauty salon in Wapda Town, Lahore? Nunchi Salon by Naheed offers hair, bridal makeup, facials, nails and party styling at 13-E2 Wapda Town. Open daily 11am–8pm.";
+  "Looking for a beauty salon in Wapda Town, Lahore? Nunchi Salon by Naheed offers hair, bridal makeup, facials, nails and party styling at 13-E2 Wapda Town. Open daily 11am–9pm.";
 
 export const metadata: Metadata = {
   title: PAGE_TITLE,
@@ -85,7 +85,7 @@ const LOCAL_FAQS = [
   {
     question: "What are your opening hours?",
     answer:
-      "We are open Monday to Sunday, 11:00 AM to 8:00 PM. Bridal appointments are best booked in advance so we can reserve enough time for you and your family.",
+      "We are open Monday to Sunday, 11:00 AM to 9:00 PM. Bridal appointments are best booked in advance so we can reserve enough time for you and your family.",
   },
   {
     question: "Do I need an appointment?",
@@ -161,7 +161,7 @@ export default function BeautySalonWapdaTownPage() {
         eyebrow="Wapda Town, Lahore"
         title="Your beauty salon in Wapda Town, Lahore."
         italicWords={[4, 5]}
-        description="Nunchi Salon by Naheed is a full-service beauty salon at 13-E2 Wapda Town, Lahore. From haircuts and colour to bridal makeup, facials and nails, everything is under one roof — open daily, 11:00 AM to 8:00 PM."
+        description="Nunchi Salon by Naheed is a full-service beauty salon at 13-E2 Wapda Town, Lahore. From haircuts and colour to bridal makeup, facials and nails, everything is under one roof — open daily, 11:00 AM to 9:00 PM."
       />
 
       <section className="pb-24 md:pb-32" aria-labelledby="local-intro-title">
@@ -260,7 +260,7 @@ export default function BeautySalonWapdaTownPage() {
                     <p className="mt-1.5">
                       Monday to Sunday
                       <br />
-                      11:00 AM – 8:00 PM
+                      11:00 AM – 9:00 PM
                     </p>
                   </div>
                 </div>

@@ -20,7 +20,7 @@ import { PRIMARY_NAV, SERVICE_MENU } from "@/lib/nav";
 import { SITE } from "@/lib/site";
 import { cn } from "@/lib/cn";
 
-const CALL_NUMBERS = "03210044497 - 03030500012";
+const CALL_NUMBERS = "042 35224276 - 0321 0044497";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -104,7 +104,7 @@ export default function Navbar() {
                 </span>
                 <div>
                   <span className="nc-info-label">Opening hours:</span>
-                  <p className="nc-info-link">11:00AM - 8:00PM</p>
+                  <p className="nc-info-link">11:00AM - 9:00PM</p>
                 </div>
               </div>
             </div>
@@ -272,7 +272,7 @@ export default function Navbar() {
             <a href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`}>
               {SITE.phone}
             </a>
-            <p className="mt-4">We are open 11:00 AM — 8:00 PM, seven days a week.</p>
+            <p className="mt-4">We are open 11:00 AM — 9:00 PM, seven days a week.</p>
 
             <Link
               href="/contact"

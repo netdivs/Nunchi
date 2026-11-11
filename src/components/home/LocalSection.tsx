@@ -17,7 +17,7 @@ const HIGHLIGHTS = [
   {
     icon: ClockIcon,
     title: "Open every day",
-    text: "Visit us Monday to Sunday, 11:00 AM to 8:00 PM. Walk in for a consultation or book ahead for bridal and party appointments.",
+    text: "Visit us Monday to Sunday, 11:00 AM to 9:00 PM. Walk in for a consultation or book ahead for bridal and party appointments.",
   },
   {
     icon: GridIcon,

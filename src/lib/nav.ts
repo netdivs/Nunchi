@@ -32,10 +32,10 @@ export const SERVICE_LINKS = [
 ] as const;
 
 export const OPENING_HOURS = [
-  { day: "Monday", time: "11am - 8pm" },
-  { day: "Tuesday", time: "11am - 8pm" },
-  { day: "Wednesday", time: "11am - 8pm" },
-  { day: "Thursday", time: "11am - 8pm" },
-  { day: "Fri - Sat", time: "11am - 8pm" },
-  { day: "Sunday", time: "11am - 8pm" },
+  { day: "Monday", time: "11am - 9pm" },
+  { day: "Tuesday", time: "11am - 9pm" },
+  { day: "Wednesday", time: "11am - 9pm" },
+  { day: "Thursday", time: "11am - 9pm" },
+  { day: "Fri - Sat", time: "11am - 9pm" },
+  { day: "Sunday", time: "11am - 9pm" },
 ] as const;

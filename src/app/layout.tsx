@@ -25,7 +25,7 @@ const dmSans = DM_Sans({
 
 const SITE_TITLE = "Nunchi Salon by Naheed — Beauty Salon in Lahore";
 const SITE_DESCRIPTION =
-  "Nunchi Salon by Naheed is a premium beauty salon in Wapda Town, Lahore for hair, bridal makeup, facials, nails and party styling. Open daily 11am–8pm. Book your appointment today.";
+  "Nunchi Salon by Naheed is a premium beauty salon in Wapda Town, Lahore for hair, bridal makeup, facials, nails and party styling. Open daily 11am–9pm. Book your appointment today.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: SITE_TITLE,
     description:
-      "A premium beauty salon in Wapda Town, Lahore for hair, bridal makeup, facials, nails and party styling. Where beauty meets elegance.",
+      "A premium beauty salon in Wapda Town, Lahore for hair, bridal makeup, facials, nails and party styling. Feel great with us.",
   },
   twitter: {
     card: "summary_large_image",
@@ -159,7 +159,7 @@ const jsonLd = {
       "Sunday",
     ],
     opens: "11:00",
-    closes: "20:00",
+    closes: "21:00",
   },
   sameAs: SITE.socials.map((s) => s.href),
 };

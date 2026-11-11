@@ -76,10 +76,10 @@ export default function OpenGraphImage() {
             textAlign: "center",
           }}
         >
-          Where beauty,
+          Feel great,
           <br />
           <span style={{ color: "#C6A972", fontStyle: "italic" }}>
-            meets elegance.
+            with us.
           </span>
         </div>
         <div

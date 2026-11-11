@@ -1,11 +1,11 @@
 export const SITE = {
   name: "Nunchi Salon by Naheed",
   shortName: "Nunchi",
-  tagline: "Where beauty meets elegance.",
+  tagline: "Feel great with us",
   url: "https://nunchi.pk",
 
-  phone: "+92 321 0044497",
-  phoneAlt: "+92 303 0500012",
+  phone: "042 35224276",
+  phoneAlt: "+92 321 0044497",
   whatsapp: "923210044497",
   email: "info@nunchi.pk",
   address: "13-E2 Wapda Town, Lahore, Pakistan",
@@ -31,7 +31,7 @@ export const SITE = {
     "Lahore",
   ],
   hours: [
-    { day: "Monday — Sunday", time: "11:00 AM — 8:00 PM" },
+    { day: "Monday — Sunday", time: "11:00 AM — 9:00 PM" },
   ],
 
   socials: [
