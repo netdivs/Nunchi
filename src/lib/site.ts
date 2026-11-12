@@ -41,6 +41,7 @@ export const SITE = {
       href: "https://www.facebook.com/profile.php?id=61551993426541",
     },
     { label: "TikTok", href: "https://www.tiktok.com/@nunchisalon" },
+    { label: "WhatsApp", href: "https://wa.me/923210044497" },
   ],
 
   navigation: [

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MobileActionBar from "@/components/MobileActionBar";
 import PageTransition from "@/components/PageTransition";
 import ScrollTop from "@/components/ScrollTop";
 import { SITE } from "@/lib/site";
@@ -161,7 +162,9 @@ const jsonLd = {
     opens: "11:00",
     closes: "21:00",
   },
-  sameAs: SITE.socials.map((s) => s.href),
+  sameAs: SITE.socials
+    .filter((social) => social.label !== "WhatsApp")
+    .map((social) => social.href),
 };
 
 export default function RootLayout({
@@ -185,6 +188,7 @@ export default function RootLayout({
         <Navbar />
         <PageTransition>{children}</PageTransition>
         <Footer />
+        <MobileActionBar />
         <ScrollTop />
       </body>
     </html>

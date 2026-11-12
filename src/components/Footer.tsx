@@ -7,6 +7,7 @@ import {
   MapPinIcon,
   PhoneIcon,
   TikTokIcon,
+  WhatsAppIcon,
 } from "@/components/Icons";
 import { PRIMARY_NAV, SERVICE_LINKS, OPENING_HOURS } from "@/lib/nav";
 import { SITE } from "@/lib/site";
@@ -62,7 +63,9 @@ export default function Footer() {
                     ? FacebookIcon
                     : social.label === "Instagram"
                       ? InstagramIcon
-                      : TikTokIcon;
+                      : social.label === "WhatsApp"
+                        ? WhatsAppIcon
+                        : TikTokIcon;
                 return (
                   <a
                     key={social.label}

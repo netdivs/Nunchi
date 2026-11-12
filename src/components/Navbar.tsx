@@ -15,6 +15,7 @@ import {
   MenuIcon,
   PhoneIcon,
   TikTokIcon,
+  WhatsAppIcon,
 } from "@/components/Icons";
 import { PRIMARY_NAV, SERVICE_MENU } from "@/lib/nav";
 import { SITE } from "@/lib/site";
@@ -116,7 +117,9 @@ export default function Navbar() {
                     ? FacebookIcon
                     : social.label === "Instagram"
                       ? InstagramIcon
-                      : TikTokIcon;
+                      : social.label === "WhatsApp"
+                        ? WhatsAppIcon
+                        : TikTokIcon;
                 return (
                   <a
                     key={social.label}
@@ -193,6 +196,22 @@ export default function Navbar() {
                 Appointment Now
                 <span aria-hidden="true">&rarr;</span>
               </Link>
+              <a
+                href={`https://wa.me/${SITE.whatsapp}`}
+                className="nc-mobile-quick nc-mobile-quick--whatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Chat with ${SITE.shortName} on WhatsApp`}
+              >
+                <WhatsAppIcon size={18} />
+              </a>
+              <a
+                href={`tel:${SITE.phone.replace(/[^+\d]/g, "")}`}
+                className="nc-mobile-quick nc-mobile-quick--call"
+                aria-label={`Call ${SITE.shortName}`}
+              >
+                <PhoneIcon size={17} />
+              </a>
               <button
                 type="button"
                 className="nc-mobile-toggle"
@@ -290,7 +309,9 @@ export default function Navbar() {
                     ? FacebookIcon
                     : social.label === "Instagram"
                       ? InstagramIcon
-                      : TikTokIcon;
+                      : social.label === "WhatsApp"
+                        ? WhatsAppIcon
+                        : TikTokIcon;
                 return (
                   <a
                     key={social.label}
